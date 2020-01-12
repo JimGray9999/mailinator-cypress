@@ -1,0 +1,25 @@
+{
+  "name": "mailinator-cypress",
+  "version": "1.0.0",
+  "description": "cypressio automation demonstration",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimGray9999/mailinator-cypress.git"
+  },
+  "author": "Jim Gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimGray9999/mailinator-cypress/issues"
+  },
+  "homepage": "https://github.com/JimGray9999/mailinator-cypress#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "cypress": "^3.8.2"
+  }
+}
