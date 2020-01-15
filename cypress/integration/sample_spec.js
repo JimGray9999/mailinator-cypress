@@ -1,7 +1,11 @@
-const login = require('../../vars');
-
-
 describe('My First Test', function() {
+  let username, password;
+
+  before(() => {
+    username = Cypress.env('username')
+    password = Cypress.env('password')
+  })
+  
   it('Visit Mailinator site', function() {
     cy.visit('https://www.mailinator.com/')
 
@@ -9,10 +13,10 @@ describe('My First Test', function() {
       .click()
 
     cy.get('#many_login_email')
-      .type(login.username)
+      .type(username)
 
     cy.get('#many_login_password')
-      .type(login.password)
+      .type(password)
 
     cy.get('.btn')
       .click()
