@@ -1,4 +1,4 @@
-describe('My First Test', function() {
+describe('Login Test', function() {
   let username, password;
 
   before(() => {
@@ -8,7 +8,9 @@ describe('My First Test', function() {
   
   it('Visit Mailinator site', function() {
     cy.visit('https://www.mailinator.com/')
-
+  })
+  
+  it('Enter Login Credentials and Press Login', function() {
     cy.get('.nav-login')
       .click()
 
@@ -20,9 +22,5 @@ describe('My First Test', function() {
 
     cy.get('.btn')
       .click()
-    
-    cy.get('#many_login_error')
-    //add assertion of error message
-    // "Invalid Email or Password"
   })
 })
