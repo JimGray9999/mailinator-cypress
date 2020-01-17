@@ -29,19 +29,20 @@ describe('Login Test', function() {
     //     .click()
     // })
 
-  // it('Logout', function() {
-  //   cy.on('uncaught:exception', (err, runnable) => {
-  //     expect(err.message).to.include('something about the error')
+  it('Logout', function() {
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('$(...).iCheck is not a function')
   
-  //     done()
   
-  //     // return false to prevent the error from
-  //     // failing this test
-  //     return false
-  //   })
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
     
-  //   cy.wait(2000)
-  //   cy.contains('LOGIN')
-  //     .click()
-  // })
+    cy.wait(2000)
+    cy.contains('LOGIN')
+      .click()
+
+    cy.get('h1').should('contain', 'Subscriber Login')
+  })
 })
