@@ -38,6 +38,11 @@ describe('Verify Elements Test', function() {
       cy.get('.site_title > span').should('contain', 'Mailinator')
   })
 
+  it('Accept Cookies', function() {
+      cy.get('.cc-btn')
+        .click()
+    })
+
   it('Logout', function() {
     cy.wait(2000)
     cy.contains('LOGIN')

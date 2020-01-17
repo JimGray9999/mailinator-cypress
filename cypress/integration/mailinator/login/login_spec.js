@@ -24,11 +24,6 @@ describe('Login Test', function() {
       .click()
   })
 
-    // it('Accept Cookies', function() {
-    //   cy.get('.cc-btn')
-    //     .click()
-    // })
-
   it('Logout', function() {
     cy.on('uncaught:exception', (err, runnable) => {
       expect(err.message).to.include('$(...).iCheck is not a function')
