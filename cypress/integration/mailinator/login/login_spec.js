@@ -23,4 +23,25 @@ describe('Login Test', function() {
     cy.get('.btn')
       .click()
   })
+
+    // it('Accept Cookies', function() {
+    //   cy.get('.cc-btn')
+    //     .click()
+    // })
+
+  // it('Logout', function() {
+  //   cy.on('uncaught:exception', (err, runnable) => {
+  //     expect(err.message).to.include('something about the error')
+  
+  //     done()
+  
+  //     // return false to prevent the error from
+  //     // failing this test
+  //     return false
+  //   })
+    
+  //   cy.wait(2000)
+  //   cy.contains('LOGIN')
+  //     .click()
+  // })
 })

@@ -4,7 +4,8 @@
   "description": "cypressio automation demonstration",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cypress open"
+    "test": "./node_modules/.bin/cypress open",
+    "test:record": "./node_modules/.bin/cypress run --record --key df7663ac-3f96-4f46-ab40-d5d11cae88a1"
   },
   "repository": {
     "type": "git",
