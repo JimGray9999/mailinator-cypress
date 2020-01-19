@@ -24,3 +24,5 @@ jobs:
         npm run test:record
       env:
         CI: true
+        USERID: ${{ secret.mailinator_username }}
+        PASSWORD: ${{ secret.mailinator_password }}

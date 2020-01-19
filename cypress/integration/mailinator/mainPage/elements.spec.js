@@ -25,23 +25,39 @@ describe('Verify Elements Test', function() {
         .click()
     })
 
-
-  it('verify Mailinator Header', function() {
-      cy.on('uncaught:exception', (err, runnable) => {
-              expect(err.message).to.include('$(...).iCheck is not a function')
-          
-              // return false to prevent the error from
-              // failing this test
-              return false
-            })
-      
-      cy.get('.site_title > span').should('contain', 'Mailinator')
+  it('Accept Cookies', function() {
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('$(...).iCheck is not a function')
+  
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+    
+    cy.get('.cc-btn')
+      .click()
   })
 
-  it('Accept Cookies', function() {
-      cy.get('.cc-btn')
-        .click()
-    })
+  it('verify Mailinator Header', function() {  
+    cy.get('.site_title > span').should('contain', 'Mailinator')
+
+  })
+
+  it('Verify Public Mailinator Header', function() {
+    cy.get('.menu_section > :nth-child(1) > :nth-child(1) > div').should('contain', 'Public Mailinator')
+  })
+
+  it('Verify Public Inboxes Button', function() {
+    cy.get('.menu_section > :nth-child(1) > :nth-child(2) > a').should('contain', 'Public Inboxes')
+  })
+
+  it('Verify Public SMS Button', function() {
+    cy.get(':nth-child(1) > :nth-child(3) > a').should('contain', 'Public SMS')
+  })
+
+  it('Verify Pricing Button', function() {
+    cy.get(':nth-child(2) > :nth-child(1) > a').should('contain', 'Pricing')
+  })
 
   it('Logout', function() {
     cy.wait(2000)
