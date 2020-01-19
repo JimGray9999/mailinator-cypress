@@ -59,6 +59,14 @@ describe('Verify Elements Test', function() {
     cy.get(':nth-child(2) > :nth-child(1) > a').should('contain', 'Pricing')
   })
 
+  it('Verify Request Trial Button', function() {
+    cy.get(':nth-child(2) > :nth-child(2) > a').should('contain', 'Request Trial')
+  })
+
+  it('Verify Documentation Button', function() {
+    cy.get(':nth-child(2) > :nth-child(3) > a').should('contain', 'Documentation')
+  })
+
   it('Logout', function() {
     cy.wait(2000)
     cy.contains('LOGIN')
