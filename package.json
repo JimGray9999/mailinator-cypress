@@ -21,7 +21,7 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "cypress": "^3.8.2",
+    "cypress": "^12.7.0",
     "dotenv": "^8.2.0"
   }
 }
